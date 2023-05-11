@@ -14,7 +14,7 @@ def inputs(args: Namespace) -> Tuple[Dict, Namespace]:
             stack = load_stack(
                 f,
                 args.stack_masks[i] if args.stack_masks is not None else None,
-                device=args.device,
+                device=args.device, stack_idx = i
             )
             if args.thicknesses is not None:
                 stack.thickness = args.thicknesses[i]
