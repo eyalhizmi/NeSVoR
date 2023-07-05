@@ -559,7 +559,7 @@ def run_svort(dataset, model, svort, vvr, force_vvr):
         slices.extend(stack[idx_nonempty])
     dataset = slices
 
-    return dataset
+    return dataset , transforms_out
 
 
 def svort_predict(
